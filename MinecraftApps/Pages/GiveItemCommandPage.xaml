@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="MinecraftApps.Pages.GiveItemCommandPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MinecraftApps.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d">
+
+    <Grid Margin="40">
+        <StackPanel Orientation="Vertical">
+            <muxc:TextBlock Text="アイテム付与コマンド生成ツール" Margin="0 0 0 20" FontSize="24"/>
+            <muxc:TextBlock Text="指定したプレイヤーにアイテムを与えます." Margin="0 0 0 20" FontSize="12"/>
+            <StackPanel Orientation="Horizontal" Margin="0 10">
+                <muxc:TextBox Text="{x:Bind Binding.PlayerName.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="プレイヤー名" Margin="0 0 0 0" Width="200"/>
+                <muxc:TextBox Text="{x:Bind Binding.ItemId.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="アイテム名" Margin="10 0 0 0" Width="200"/>
+                <muxc:TextBox Text="{x:Bind Binding.Count.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="数量" Margin="10 0 0 0" Width="10"/>
+            </StackPanel>
+            <muxc:TextBlock Text="生成されたコマンド" Margin="0 20 0 0"/>
+            <StackPanel Orientation="Horizontal" Margin="0 10">
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <muxc:TextBlock Text="{x:Bind Binding.Command.Value, Mode=OneWay}" FontSize="16" Margin="10" Width="Auto"/>
+                </Grid>
+                <muxc:Button Click="OnCopyButtonClicked"
+                             x:Name="copyButton"
+                             Content="{x:Bind Binding.Icon}"  
+                             Command="{x:Bind Binding.CopyCommand}"
+                             Margin="20 0 0 0" Width="Auto" Height="Auto"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

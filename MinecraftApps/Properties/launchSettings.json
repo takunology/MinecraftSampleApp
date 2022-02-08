@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MinecraftApps (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "MinecraftApps (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

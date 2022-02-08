@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="MinecraftApps.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MinecraftApps.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d">
+
+    <Grid Margin="40">
+        <StackPanel Orientation="Vertical">
+            <muxc:TextBlock Text="C# ではじめるマインクラフトプログラミング - サンプルアプリ" Margin="0 0 0 20" FontSize="24"/>
+            <muxc:TextBlock Text="第23章 Windows App SDK / データバインディング" Margin="0 0 0 20" FontSize="18"/>
+            <muxc:RichTextBlock FontSize="12">
+                <Paragraph>マイクラコマンドの使い方からはじまり, マイクラ自動化, クラウドとの連携, アプリ製作など幅広い分野に触れてきました.</Paragraph>
+                <Paragraph>そして, この章で再びマイクラコマンドへと return; してきたわけです.</Paragraph>
+                <Paragraph Margin="0 10 0 0">このアプリを製作するにあたり, 様々なライブラリを使用しています.</Paragraph>
+            </muxc:RichTextBlock>
+            <muxc:TextBlock Text="使用したライブラリ" Margin="0 40 0 0" FontSize="18"/>
+            
+            <RichTextBlock Margin="0 10">
+                <Paragraph>
+                    <Hyperlink NavigateUri="https://github.com/microsoft/windowsappsdk">Microsoft.WindowsAppSDK</Hyperlink>
+                </Paragraph>
+                <Paragraph Margin="0 5 0 0">
+                    Microsoft |
+                    <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.WindowsAppSDK/1.0.0/license">ライセンス</Hyperlink>
+                </Paragraph>
+            </RichTextBlock>
+            <RichTextBlock Margin="0 10">
+                <Paragraph>
+                    <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts">Microsoft.Windows.SDK.BuildTools</Hyperlink>
+                </Paragraph>
+                <Paragraph Margin="0 5 0 0">
+                    Microsoft |
+                    <Hyperlink NavigateUri="https://licenses.nuget.org/MIT">ライセンス</Hyperlink>
+                </Paragraph>
+            </RichTextBlock>
+            
+            <RichTextBlock Margin="0 10">
+                <Paragraph>
+                    <Hyperlink NavigateUri="https://github.com/runceel/ReactiveProperty">ReactiveProperty</Hyperlink>
+                </Paragraph>
+                <Paragraph Margin="0 5 0 0">
+                    neuecc, xin9le, okazuki |
+                    <Hyperlink NavigateUri="https://licenses.nuget.org/MIT">ライセンス</Hyperlink>
+                </Paragraph>
+            </RichTextBlock>
+
+            <muxc:TextBlock Text="製作者" Margin="0 40 0 0" FontSize="18"/>
+            <RichTextBlock Margin="0 10">
+                <Paragraph>
+                    Takunology (Takumi Okawa)
+                </Paragraph>
+                <Paragraph Margin="0 5 0 0">
+                    Twitter :
+                    <Hyperlink NavigateUri="https://twitter.com/takunology_net">@takunology</Hyperlink>
+                </Paragraph>
+                <Paragraph Margin="0 5 0 0">
+                    GitHub :
+                    <Hyperlink NavigateUri="https://github.com/takunology">takunology</Hyperlink>
+                </Paragraph>
+            </RichTextBlock>
+
+        </StackPanel>
+        
+    </Grid>
+</Page>
